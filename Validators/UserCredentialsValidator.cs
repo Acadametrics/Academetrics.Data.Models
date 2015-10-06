@@ -10,7 +10,7 @@ namespace Academetrics.Data.Validators
     public UserCredentialsValidator()
     {
       //RuleFor(x => x.Id).Must(BeValidUserId).WithMessage("User Id cannot be empty."); // todo: find out why this appears to be validated automagically without the need for this line.
-      RuleFor(x => x.UserName).NotEmpty().WithMessage("You must have a user name.");
+      RuleFor(x => x.AssigneeId).NotEmpty().WithMessage("Credentials must be assigned to a user.");
       RuleFor(x => x.Password).NotEmpty().WithMessage("You must set a password.");
     }
 
