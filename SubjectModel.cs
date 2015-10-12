@@ -6,17 +6,16 @@ using System.Linq;
 
 namespace Academetrics.Data.Models
 {
-  [Validator(typeof(ClassroomValidator))]
-  public class ClassroomModel : ModelBase
+  [Validator(typeof(SubjectValidator))]
+  public class SubjectModel : ModelBase
   {
-    //public InstitutionModel Institution { get; set; } // todo: is this really necessary?
-    public List<SubjectModel> Subjects { get; set; }  // for split periods
-    public List<SetCodeModel> SetCodes { get; set; }  // for joint-classes
-    public List<LocationModel> Locations { get; set; }	// for mobile classes
+    public string SubjectCode { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
 
     public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
-      var validator = new ClassroomValidator();
+      var validator = new SubjectValidator();
       var result = validator.Validate(this);
       return result.Errors.Select(item => new ValidationResult(item.ErrorMessage, new[] { item.PropertyName }));
     }

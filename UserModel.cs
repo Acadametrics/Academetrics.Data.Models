@@ -1,5 +1,5 @@
 ﻿using Academetrics.Data.Enums;
-using Academetrics.Data.Validators;
+using Academetrics.Data.Models.Validators;
 using FluentValidation.Attributes;
 using System;
 using System.Collections.Generic;

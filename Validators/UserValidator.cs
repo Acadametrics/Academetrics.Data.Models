@@ -3,7 +3,7 @@ using FluentValidation;
 using System;
 using System.Collections.Generic;
 
-namespace Academetrics.Data.Validators
+namespace Academetrics.Data.Models.Validators
 {
   public class UserValidator : AbstractValidator<UserModel>
   {

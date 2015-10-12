@@ -3,7 +3,7 @@ using Academetrics.Data.Models;
 using FluentValidation;
 using System.Linq;
 
-namespace Academetrics.Data.Validators
+namespace Academetrics.Data.Models.Validators
 {
   public class PeriodValidator : AbstractValidator<PeriodModel>
   {
@@ -15,7 +15,7 @@ namespace Academetrics.Data.Validators
       RuleFor(x => x.Classroom).Must(HaveLocationsAndSetCodes).WithMessage("Period classroom needs to have both location(s) and setcode(s).");
     }
 
-    bool HaveLocationsAndSetCodes(IClassroom classroom)
+    bool HaveLocationsAndSetCodes(ClassroomModel classroom)
     {
       if (classroom.Locations == null || !classroom.Locations.Any())
       {

@@ -1,7 +1,7 @@
 ﻿using Academetrics.Data.Models;
 using FluentValidation;
 
-namespace Academetrics.Data.Validators
+namespace Academetrics.Data.Models.Validators
 {
   public class UserPeriodsValidator : AbstractValidator<UserPeriodsModel>
   {
