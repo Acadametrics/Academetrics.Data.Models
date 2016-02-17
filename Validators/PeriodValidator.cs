@@ -9,7 +9,7 @@ namespace Academetrics.Data.Models.Validators
   {
     public PeriodValidator()
     {
-      RuleFor(x => x.InstitutionId).NotEmpty().WithMessage("Period must be assigned to an institution.");
+      //RuleFor(x => x.InstitutionId).NotEmpty().WithMessage("Period must be assigned to an institution.");
       RuleFor(x => x.Start).NotEmpty().WithMessage("Period must have a start date and time.");
       RuleFor(x => x.End).NotEmpty().WithMessage("Period must have an end date and time.");
       RuleFor(x => x.Classroom).Must(HaveLocationsAndSetCodes).WithMessage("Period classroom needs to have both location(s) and setcode(s).");

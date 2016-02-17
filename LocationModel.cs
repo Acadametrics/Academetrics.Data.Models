@@ -16,7 +16,8 @@ namespace Academetrics.Data.Models
     public string Room { get; set; }
     public string Description { get; set; }
     public decimal Latitude { get; set; }
-    public decimal Longtitude { get; set; }
+    public decimal Longitude { get; set; }
+    public decimal Altitude { get; set; }
 
     public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
